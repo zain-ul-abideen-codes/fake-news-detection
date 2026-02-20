@@ -162,12 +162,17 @@ def manual_testing(news):
     (output_lable(pred_lr[0]), output_lable(pred_gbc[0]), output_lable(pred_rfc[0])))
 
 
-# Manual testing
-news = str(input("Enter the news: "))
-manual_testing(news)
+# # ============================================================
+# # Continuous Manual Testing
+# # ============================================================
 
-
-
+while True:
+    news_input = input("\nEnter the news (or type 'exit' to quit): ")
+    if news_input.lower() == "exit":
+        print("Exiting manual testing...")
+        break
+    manual_testing(news_input)
+    
 
 
 
